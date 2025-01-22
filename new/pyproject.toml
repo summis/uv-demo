@@ -1,0 +1,17 @@
+[project]
+name = "project"
+version = "0.1.0"
+
+[dependency-groups]
+test = [
+    "pytest==8.3.4"
+]
+type-check = [
+    "mypy==1.14.1"
+]
+
+[tool.uv.workspace]
+members = ["app", "algorithm"]
+
+[tool.uv.sources]
+algorithm = { workspace = true }
